@@ -39,8 +39,6 @@ public class TabFragment1 extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mContactsDataSource = new ContactsDataSource(getContext());
         mContactsDataSource.open();
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mRecyclerView.setLayoutManager(mLayoutManager);
         return view;
     }
 
@@ -54,13 +52,14 @@ public class TabFragment1 extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        Log.d(TAG,"onResume()");
-        contacts = mContactsDataSource.getAllContacts();
-        mAdapter = new MyAdapter(contacts);
+        mLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mAdapter = new MyAdapter(mContactsDataSource,getContext());
         mRecyclerView.setAdapter(mAdapter);
         addcallbacks();
 
     }
+
 
     @Override
     public void onStart() {
@@ -69,9 +68,16 @@ public class TabFragment1 extends Fragment {
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG,"onStart()");
+    }
+
+    @Override
     public void onPause() {
         super.onPause();
         Log.d(TAG,"onPause()");
+        mAdapter = null;
     }
 
     public void setdata() {

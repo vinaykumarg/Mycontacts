@@ -1,6 +1,7 @@
 package com.example.vinayg.mycontacts.myapp;
 
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -76,7 +77,10 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
                     return;
                 }
                 mContactsDataSource.createContact(name,phone);
-                finish();
+                Intent intent = new Intent(this,MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+//                finish();
                 break;
 
         }
@@ -85,6 +89,12 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onStop() {
         super.onStop();
+        finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
         mContactsDataSource.close();
     }
 }

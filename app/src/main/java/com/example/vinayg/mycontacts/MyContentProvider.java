@@ -35,8 +35,7 @@ public class MyContentProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         Context context = getContext();
-        mContactsDataSource = new ContactsDataSource(context);
-        mContactsDataSource.open();
+
         if (mContactsDataSource != null) {
             return true;
         }
