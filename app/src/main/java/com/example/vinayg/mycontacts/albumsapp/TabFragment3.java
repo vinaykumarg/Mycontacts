@@ -1,4 +1,4 @@
-package com.example.vinayg.mycontacts;
+package com.example.vinayg.mycontacts.albumsapp;
 
 /**
  * Created by vinay.g on 08-Feb-17.
@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.vinayg.mycontacts.R;
 
 public class TabFragment3 extends Fragment {
 
