@@ -10,7 +10,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,7 +100,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
 
         @Override
         public void onItemSelected() {
-            Log.d("selected","item");
             itemView.setBackgroundColor(Color.BLUE);
         }
 
@@ -157,12 +155,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
-        Log.d("myadapter",mContacts.size()+"");
     }
 
     @Override
     public void onDetachedFromRecyclerView(RecyclerView recyclerView) {
         super.onDetachedFromRecyclerView(recyclerView);
-        Log.d("myadapter","onDetachedFromRecyclerView()");
+
     }
 }

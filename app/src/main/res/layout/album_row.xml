@@ -22,7 +22,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/title_text_reminder"
+        android:id="@+id/albumname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/thumbnail"
@@ -34,10 +34,10 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/time_text_reminder"
+        android:id="@+id/track"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_text_reminder"
+        android:layout_below="@id/albumname"
         android:textColor="#343434"
         android:textSize="15dip"
         android:layout_marginTop="5dip"

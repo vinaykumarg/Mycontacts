@@ -5,10 +5,6 @@ package com.example.vinayg.mycontacts.reminderapp;
  */
 
 
-/**
- * Created by Sowjanya on 20-02-2017.
- */
-
 public class Reminder {
     int id;
     String nameTask,timeTask;

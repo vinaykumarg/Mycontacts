@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(tab.getPosition());
                 if (tab.getPosition()>0){
                     fabBtn.hide();
+//                    Toast.makeText(getApplication(),tab.getPosition()+"",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     fabBtn.show();

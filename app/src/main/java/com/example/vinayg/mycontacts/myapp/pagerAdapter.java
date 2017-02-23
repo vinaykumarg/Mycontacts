@@ -7,8 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.vinayg.mycontacts.albumsapp.TabFragment3;
 import com.example.vinayg.mycontacts.reminderapp.TabFragment2;
-import com.example.vinayg.mycontacts.TabFragment3;
 
 public class pagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
